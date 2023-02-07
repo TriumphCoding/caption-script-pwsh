@@ -115,3 +115,23 @@ Ike
     Red Cape
 
 ```
+
+
+## Remove-InvalidTokens
+```
+[string]$Path - The Base Directory you wish to summarize.")][Alias("LiteralPath")]
+[Switch]$Recurse - Use this tag to search through all subfolders of your main folder.
+[Switch]$SkipEmoticons - Don't attempt to remove emoticons ( ;) :d :D ... ). By default emoticons are removed first.
+[Switch]$SkipParenthesis - Don't attempt to remove Parenthesis ( or ).
+```
+
+Call this command using the following code, and you will attempt to clean up all the emoticons that can be added via automatic tagging.
+```
+.\Remove-InvalidTokens "E:\Temp\FEH" -Recurse
+```
+
+Here is the emoticon list:
+```
+';)',':d',':D',';d',';D','xd','XD','d:','D:',':3',';3','x3','3:','uwu',':p',';p',':q',':9',';q','>:)','>:(',':t',':i',': エ',':/',':|',':x',':c','c:',':<',';<',':<>',':>',':>=',':o',';o','o3o','(-3-)','>3<','o_o','0_0','|_|','._.','^_^','^o^','\(^o^)/','^q^','^p^','>_<','xd','XD','x3','>o<','@_@','>_@','+_+','+_-','=_=','=^=','=v=','<o>_<o>','<|>_<|>'
+```
+
